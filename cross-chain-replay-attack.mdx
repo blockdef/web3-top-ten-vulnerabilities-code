@@ -1,6 +1,14 @@
+---
 title: Understanding Web3 Vulnerabilities
 ---
 
-# Understanding Web3 Vulnerabilities
+## Code Example
 
-Web3, the decentralized web, brings many exciting possibilities, but it also introduces unique security challenges. Let's explore some common vulnerabilities:
+```javascript
+contract IntegerOverflow {
+    uint256 public balance = 100;
+
+    function addToBalance(uint256 _addition) public {
+        balance += _addition; // Vulnerable to integer overflow
+    }
+}
